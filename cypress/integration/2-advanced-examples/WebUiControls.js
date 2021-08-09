@@ -9,4 +9,7 @@ describe("Execution on Web Control", function () {
     cy.get("#checkBoxOption1").uncheck().should("not.be.checked");
     cy.get("input[type='checkbox']").check(["option2", "option3"]);
   });
+  it("Handling Drop downs", function () {
+    cy.get("select").select("option2").should("have.value", "option2");
+  });
 });
