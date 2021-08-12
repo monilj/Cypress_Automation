@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 describe("Execution on Web Control", function () {
-  it("Web Control for Handling Child tab with combination of Cypress and JQuery ", function () {
+  it("Web Control for Handling Web Tables", function () {
     cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
     cy.get("tr td:nth-child(2)").each(($el, index, $lsit) => {
       const text = $el.text();
