@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 describe("Execution on Web Control", function () {
-  it("Web Control Checkbox", function () {
+  it("Web Control Handling Alerts and Confirmation box", function () {
     cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
     cy.get("#alertbtn").click();
     cy.get("#confirmbtn").click();
