@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
-import HomePage from "../pageObject/HomePage";
+import HomePage from "./pageObjects/HomePage";
+import ProductPage from "./pageObjects/ProductPage";
 import "cypress-iframe";
 describe("developing Test framework", function () {
   before(function () {
@@ -10,6 +11,7 @@ describe("developing Test framework", function () {
 
   it("Building Framework", function () {
     const homePage = new HomePage();
+    const productPage = new ProductPage();
     cy.visit("https://rahulshettyacademy.com/angularpractice/");
     homePage.getShopTab().click();
     cy.pause();
@@ -17,5 +19,6 @@ describe("developing Test framework", function () {
     this.data.productName.forEach((element) => {
       cy.selectProduct(element);
     });
+    productPage.getCheckOutButton().click();
   });
 });
