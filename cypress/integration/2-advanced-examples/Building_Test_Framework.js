@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 import "cypress-iframe";
+
+import HomePage from "../pageObject/HomePage";
 describe("developing Test framework", function () {
   before(function () {
     cy.fixture("example").then(function (data) {
