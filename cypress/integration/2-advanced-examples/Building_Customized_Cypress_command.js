@@ -6,10 +6,12 @@ describe("developing Test framework", function () {
       this.data = data;
     });
   });
+
   it("Building Framework", function () {
     cy.visit("https://rahulshettyacademy.com/angularpractice/");
     cy.get(":nth-child(2) > .nav-link").click();
-    cy.selectProduct("Blackberry");
-    cy.selectProduct("Nokia Edge");
+    this.data.productName.forEach((element) => {
+      cy.selectProduct(element);
+    });
   });
 });
