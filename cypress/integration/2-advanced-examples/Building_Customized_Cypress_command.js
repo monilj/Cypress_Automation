@@ -10,6 +10,8 @@ describe("developing Test framework", function () {
   it("Building Framework", function () {
     cy.visit("https://rahulshettyacademy.com/angularpractice/");
     cy.get(":nth-child(2) > .nav-link").click();
+    cy.pause();
+    cy.debug();
     this.data.productName.forEach((element) => {
       cy.selectProduct(element);
     });
