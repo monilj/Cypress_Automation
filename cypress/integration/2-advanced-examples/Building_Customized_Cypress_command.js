@@ -15,7 +15,8 @@ describe("developing Test framework", function () {
     const homePage = new HomePage();
     const productPage = new ProductPage();
     const productListPage = new ProductListPage();
-    cy.visit("https://rahulshettyacademy.com/angularpractice/");
+    // cy.visit("https://rahulshettyacademy.com/angularpractice/");
+    cy.visit(Cypress.env("url"));
     homePage.getShopTab().click();
     // cy.pause();
     // cy.debug();
