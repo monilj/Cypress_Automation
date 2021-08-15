@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
-import HomePage from "./pageObjects/HomePage";
-import ProductPage from "./pageObjects/ProductPage";
-import ProductListPage from "./pageObjects/ProductListPage";
+import HomePage from "../../support/pageObjects/HomePage";
+import ProductPage from "../../support/pageObjects/ProductPage";
+import ProductListPage from "../../support/pageObjects/ProductListPage";
 import "cypress-iframe";
 
 describe("developing Test framework", function () {
