@@ -7,7 +7,8 @@
     "test": "node_modules\\.bin\\cypress run",
     "headTest": "npm run test -- --headed",
     "ChromeTest": "npm run test -- --browser Chrome",
-    "DashboardTest": "npm run test -- --record --key b952d4f7-5bd5-4db5-8c97-444dca0e2f9f"
+    "DashboardTest": "npm run test -- --record --key b952d4f7-5bd5-4db5-8c97-444dca0e2f9f",
+    "GreenKartTest": "npm run test -- --spec \"cypress/integration/2-advanced-examples/GreenKart/*  \""
   },
   "author": "",
   "license": "ISC",

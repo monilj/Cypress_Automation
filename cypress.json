@@ -4,5 +4,8 @@
   "env": {
     "url": "https://rahulshettyacademy.com/angularpractice/"
   },
-  "projectId": "m96hz8"
+  "projectId": "m96hz8",
+  "retries": {
+    "runMode": 1
+  }
 }
