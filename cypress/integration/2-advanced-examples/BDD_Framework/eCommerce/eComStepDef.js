@@ -21,7 +21,7 @@ When("I add items to Cart", function () {
   productPage.getCheckOutButton().click();
 });
 
-And("Validate the total prices ", () => {
+And("Validate the total prices", () => {
   var sum = 0;
   cy.get("tr td:nth-child(4) strong")
     .each(($el, index, $list) => {
@@ -42,7 +42,7 @@ And("Validate the total prices ", () => {
   });
 });
 
-Then("Then Select country submit and Verify Thank you", () => {
+Then("Select country submit and Verify Thank you", () => {
   productListPage.getFinalCheckOutButton().click();
   cy.get("#country").type("India");
   cy.get(".suggestions > ul > li > a", { timeout: 6000 }).click();
@@ -64,7 +64,7 @@ When("I fill the form details", function (dataTable) {
 Then("validate the forms behaviour", function () {
   homePage.getTwoWayDataBinding().should("have.value", name);
   homePage.getEditBox().should("have.attr", "minlength", "2");
-  homePage.getEntrepreneaur().should("be.disabled");
+  homePage.getEntrepreneur().should("be.disabled");
   Cypress.config("defaultCommandTimeout", 8000);
 });
 // And select the Shop Page
