@@ -1,3 +1,8 @@
 {
-  "defaultCommandTimeout": "6000"
+  "defaultCommandTimeout": 8000,
+  "reporter": "mochawesome",
+  "env": {
+    "url": "https://rahulshettyacademy.com/angularpractice/"
+  },
+  "projectId": "m96hz8"
 }
