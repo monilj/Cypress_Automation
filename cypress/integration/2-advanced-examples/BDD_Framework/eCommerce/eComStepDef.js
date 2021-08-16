@@ -6,6 +6,7 @@ import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 const homePage = new HomePage();
 const productPage = new ProductPage();
 const productListPage = new ProductListPage();
+let name;
 Given("I open ECommerce Page", () => {
   cy.visit(Cypress.env("url"));
 });
@@ -51,4 +52,22 @@ Then("Then Select country submit and Verify Thank you", () => {
     const actualText = element.text();
     expect(actualText.includes("Success")).to.be.true;
   });
+});
+
+When("I fill the form details", function (dataTable) {
+  // [bobz , male   ]
+  name = dataTable.rawTable[1][0];
+  homePage.getEditBox().type(dataTable.rawTable[1][0]);
+  homePage.getGender().select(dataTable.rawTable[1][1]);
+});
+// Then validate the forms behaviour
+Then("validate the forms behaviour", function () {
+  homePage.getTwoWayDataBinding().should("have.value", name);
+  homePage.getEditBox().should("have.attr", "minlength", "2");
+  homePage.getEntrepreneaur().should("be.disabled");
+  Cypress.config("defaultCommandTimeout", 8000);
+});
+// And select the Shop Page
+And("select the Shop Page", () => {
+  homePage.getShopTab().click();
 });
