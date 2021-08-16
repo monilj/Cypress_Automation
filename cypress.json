@@ -4,6 +4,7 @@
   "env": {
     "url": "https://rahulshettyacademy.com/angularpractice/"
   },
+  "testFiles": "**/*.feature",
   "projectId": "m96hz8",
   "retries": {
     "runMode": 1
